@@ -6,11 +6,11 @@
 #' @return A data.frame/tibble
 #'
 
-descriptive_stats <- function(data) {
+descriptive_stats <- function(data, group_variable, value_variable) {
     data %>%
-        dplyr::group_by(metabolite) %>%
+        dplyr::group_by({{group_variable}}) %>%
         dplyr::summarise(across(
-            value,
+            {{value_variable}},
             list(
                 mean = mean,
                 sd = sd
