@@ -16,6 +16,7 @@ Encoding: UTF-8
 Title: AdvancedR3
 Suggests: 
     gitcreds,
+    styler,
     usethis
 URL: https://github.com/christhoning/r3_advanced
 BugReports: https://github.com/christhoning/r3_advanced/issues
