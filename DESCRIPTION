@@ -17,3 +17,5 @@ Title: AdvancedR3
 Suggests: 
     gitcreds,
     usethis
+URL: https://github.com/christhoning/r3_advanced
+BugReports: https://github.com/christhoning/r3_advanced/issues
