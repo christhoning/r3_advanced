@@ -6,11 +6,13 @@ Imports:
     fs,
     here,
     knitr,
+    ps,
     readr,
     readxl,
     rmarkdown,
     snakecase,
     stringr,
+    targets,
     tidyr
 Encoding: UTF-8
 Title: AdvancedR3
@@ -20,3 +22,5 @@ Suggests:
     usethis
 URL: https://github.com/christhoning/r3_advanced
 BugReports: https://github.com/christhoning/r3_advanced/issues
+Depends: 
+    tidyverse
