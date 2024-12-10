@@ -1,0 +1,8 @@
+Package: r3_advanced
+Type: Project
+Version: 0.0.1
+Imports:
+    knitr,
+    rmarkdown
+Encoding: UTF-8
+Title: AdvancedR3
