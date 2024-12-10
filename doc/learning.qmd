@@ -23,17 +23,5 @@ Data are in the long format.
 .x, the column names, without specifying it.
 
 ```{r}
-lipidomics %>%
-  group_by(metabolite) %>%
-  summarise(across(
-    value,
-    list(
-      mean = mean,
-      sd = sd
-    )
-  )) %>%
-  mutate(across(
-    where(is.numeric),
-    ~ round(.x, digits = 1)
-  ))
+descriptive_stats(lipidomics)
 ```
