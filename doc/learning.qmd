@@ -20,7 +20,12 @@ lipidomics <- tar_read(lipidomics)
 # Results
 
 ```{r}
-tar_read(df_stats_by_metabolite)
+tar_read(df_stats_by_metabolite) %>% 
+    mutate(MeanSD = glue::glue("{value_mean} ({value_sd})")) %>% # combine value_mean and value_sd into a new parameter
+    select(Metabolite = metabolite, `Mean SD` = MeanSD) %>% 
+    knitr::kable(caption = "Descriptive Statistics of the Metabolites.") # Make table pretty
+
+
 ```
 
 ```{r}
