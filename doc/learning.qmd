@@ -8,26 +8,21 @@ format: html
 
 ```{r setup}
 #| include: false
+targets::tar_config_set(store = here::here("_targets"))
 library(tidyverse)
-library(readr)
+library(targets)
 
 source(here::here("R/functions.R"))
 
-lipidomics <- read_csv(here::here("data/lipidomics.csv"))
+lipidomics <- tar_read(lipidomics)
 ```
 
-## Basic Statistics
-
-Data are in the long format.
-
-.x, the column names, without specifying it.
+# Results
 
 ```{r}
-descriptive_stats(lipidomics)
+tar_read(df_stats_by_metabolite)
 ```
 
-## Figure Outputs
-
 ```{r}
-plot_distributions(lipidomics)
+tar_read(fig_metabolite_distribution)
 ```

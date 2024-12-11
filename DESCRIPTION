@@ -8,11 +8,13 @@ Imports:
     here,
     knitr,
     ps,
+    quarto,
     readr,
     readxl,
     rmarkdown,
     snakecase,
     stringr,
+    tarchetypes,
     targets,
     tidyr
 Encoding: UTF-8
