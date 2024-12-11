@@ -7,16 +7,19 @@ Imports:
     ggplot2,
     here,
     knitr,
+    parsnip,
     ps,
     quarto,
     readr,
     readxl,
+    recipes,
     rmarkdown,
     snakecase,
     stringr,
     tarchetypes,
     targets,
-    tidyr
+    tidyr,
+    workflows
 Encoding: UTF-8
 Title: AdvancedR3
 Suggests: 
@@ -26,4 +29,5 @@ Suggests:
 URL: https://github.com/christhoning/r3_advanced
 BugReports: https://github.com/christhoning/r3_advanced/issues
 Depends: 
+    tidymodels,
     tidyverse
