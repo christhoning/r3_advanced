@@ -53,3 +53,15 @@ model_workflow <- create_model_workflow(
 
 model_workflow
 ```
+
+## Running Multiple Models
+
+Split the data according to metabolites
+
+```{r}
+lipidomics %>% 
+    columns_values_to_snake_case(metabolite) %>% 
+    group_split(metabolite) %>% # splits into a list of dataframes 
+    map(metabolites_to_wider)
+
+```
