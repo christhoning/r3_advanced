@@ -141,7 +141,7 @@ generate_model_results <- function(data) {
     tidy_model_output()
 }
 
-#' Calculates the estimates
+#' Calculates the estimates and tidy up output
 #'
 #' @param data The lipidomics
 #'
@@ -156,11 +156,11 @@ calculate_estimates <- function(data) {
 
   data %>%
     # 2. Add the code we created above.
-    select(metabolite) %>%
-    mutate(term = metabolite) %>%
+    dplyr::select(metabolite) %>%
+    dplyr::mutate(term = metabolite) %>%
     columns_values_to_snake_case(term) %>%
-    mutate(term = str_c("metabolite_", term)) %>%
-    distinct(metabolite, term) %>%
+    dplyr::mutate(term = stringr::str_c("metabolite_", term)) %>%
+    dplyr::distinct(metabolite, term) %>%
     # 3. Include the object from the first step here.
-    right_join(model_estimates, by = "term")
+    dplyr::right_join(model_estimates, by = "term")
 }
