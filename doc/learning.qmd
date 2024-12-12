@@ -46,12 +46,6 @@ lipidomics_wide
 Split the data according to metabolites
 
 ```{r}
-lipidomics %>%
-  split_by_metabolite() %>%
-  map(generate_model_results) %>%
-  list_rbind() %>%
-  filter(str_detect(term, "metabolite_"))
-
-
-calculate_estimates(lipidomics)
+model_estimates <- lipidomics %>%
+    calculate_estimates()
 ```

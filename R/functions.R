@@ -147,10 +147,20 @@ generate_model_results <- function(data) {
 #'
 #' @return A data frame
 calculate_estimates <- function(data) {
-  data %>%
+  model_estimates <- data %>%
     # Code from right before the exercise that creates the results
     split_by_metabolite() %>%
     purrr::map(generate_model_results) %>%
     purrr::list_rbind() %>%
     dplyr::filter(stringr::str_detect(term, "metabolite_"))
+
+  data %>%
+    # 2. Add the code we created above.
+    select(metabolite) %>%
+    mutate(term = metabolite) %>%
+    columns_values_to_snake_case(term) %>%
+    mutate(term = str_c("metabolite_", term)) %>%
+    distinct(metabolite, term) %>%
+    # 3. Include the object from the first step here.
+    right_join(model_estimates, by = "term")
 }
