@@ -1,6 +1,6 @@
 ---
 title: "Draft Quarto document"
-author: "Your Name"
+author: "Christine Thoning"
 format: html
 ---
 
@@ -43,11 +43,12 @@ lipidomics_wide
 
 ## Running Multiple Models
 
-Split the data according to metabolites
+```{r}
+model_estimates <- tar_read(df_model_estimates)
+```
+
+## Visualizing the Model Estimates
 
 ```{r}
-model_estimates <- lipidomics %>%
-  calculate_estimates()
-
-model_estimates
+tar_read(fig_model_estimates)
 ```

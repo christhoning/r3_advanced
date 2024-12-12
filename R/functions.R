@@ -164,3 +164,22 @@ calculate_estimates <- function(data) {
     # 3. Include the object from the first step here.
     dplyr::right_join(model_estimates, by = "term")
 }
+
+
+#' Create a ggplot object of the estimates
+#'
+#' @param results the model estimates
+#'
+#' @return a ggplot object
+plot_estimates <- function(results) {
+  results %>%
+    # Plot code here:
+    ggplot2::ggplot(ggplot2::aes(
+      x = estimate,
+      y = metabolite,
+      xmin = estimate - std.error,
+      xmax = estimate + std.error
+    )) +
+    ggplot2::geom_pointrange() +
+    ggplot2::coord_fixed(xlim = c(0, 5))
+}
