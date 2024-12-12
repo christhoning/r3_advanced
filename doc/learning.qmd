@@ -47,5 +47,7 @@ Split the data according to metabolites
 
 ```{r}
 model_estimates <- lipidomics %>%
-    calculate_estimates()
+  calculate_estimates()
+
+model_estimates
 ```

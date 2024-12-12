@@ -1,14 +1,18 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|939b1b75c0d8f224|||||||||||||||
+.Random.seed|object|13ca72a3d43f9eb9|||||||||||||||
+calculate_estimates|function|fbfbea7fb46fd35d|||||||||||||||
 columns_values_to_snake_case|function|1cbcfee90352cf60|||||||||||||||
 create_model_workflow|function|b1c4ccb7cbf5f62a|||||||||||||||
 create_recipe_spec|function|e2c69062d3a5c353|||||||||||||||
 descriptive_stats|function|bea48e3f34bcb4ab|||||||||||||||
+df_model_estimates|stem|7e3d7ff21dca55a2|2954b8877e0c4723|48d6a1c87402a710|791794764||t20069.4170216553s|7b0e517ba933dba2|1037|rds|local|vector|||2.641|glm.fit algorithm did not converge. glm.fit fitted probabilities numerically 0 or 1 occurred. glm.fit fitted probabilities numerically 0 or 1 occurred|
 df_stats_by_metabolite|stem|fc6d17e3d558f743|ce15a181d02b2e03|3a86048cc9d54dd4|519715527||t20068.3745572145s|0f030228c83a08c3|502|rds|local|vector|||0.094||
 fig_metabolite_distribution|stem|7e7b3b48258392d7|86673d84fb1f96ff|d4ab9ce6e9dee0c6|1599393873||t20068.3845477841s|b461d89df487a64f|137332|rds|local|vector|||0.125||
 file|stem|2c591fdc9020ba4b|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20066.4343408707s|c55bf38e16078ef9|24295|file|local|vector|||0.005||
+generate_model_results|function|36b3832cca0d023d|||||||||||||||
 lipidomics|stem|9151be4095e9c2da|0adf46d83f39a429|caa7f9716b1a46b6|-1498393010||t20068.3562950096s|98dd3e7d91b88c2a|4886|rds|local|vector|||0.169||
 metabolites_to_wider|function|190c8cc4b495bfea|||||||||||||||
 plot_distributions|function|b06f65993fa8d2d0|||||||||||||||
-quarto_doc|stem|547d03eb2bb788bc|388f14abd14602e7|1beb76b5e570dfc8|1582462002|doc/learning.html*doc/learning.qmd|t20069.3413957449s|fb95f8f2ae1bfd80|28687|file|local|vector|||7.872||
+quarto_doc|stem|a9344eae9eecd4d1|388f14abd14602e7|1beb76b5e570dfc8|1582462002|doc/learning.html*doc/learning.qmd|t20069.4171106955s|4f143adba1385e2b|29225|file|local|vector|||7.651||
+split_by_metabolite|function|b8a096c60d371027|||||||||||||||
 tidy_model_output|function|411cd07bc2ec9eec|||||||||||||||
