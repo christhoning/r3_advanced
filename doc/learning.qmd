@@ -51,4 +51,7 @@ lipidomics %>%
   map(generate_model_results) %>%
   list_rbind() %>%
   filter(str_detect(term, "metabolite_"))
+
+
+calculate_estimates(lipidomics)
 ```
